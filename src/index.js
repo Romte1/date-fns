@@ -1,4 +1,4 @@
-import { format, addDays, subMonths, differenceInDays, startOfWeek, endOfMonth, eachDayOfInterval } from 'date-fns';
+import { format, addDays, subMonths, differenceInDays, startOfWeek, endOfMonth, eachDayOfInterval, parse } from 'date-fns';
 
 // 1. Current Date and Time
 const now = new Date();
@@ -25,3 +25,14 @@ const start = new Date('2024-09-01');
 const end = new Date('2024-09-30');
 const range = eachDayOfInterval({ start, end });
 console.log('Dates in range:', range.map(date => format(date, 'yyyy-MM-dd')));
+
+// 6. Parse
+const dateString = "2024-09-11T10:30:00";
+const dateFormat = "yyyy-MM-dd'T'HH:mm:ss";
+const parsedDateTime = parse(dateString, dateFormat, new Date());
+
+console.log(parsedDateTime);
+
+const newDateFormat = format(parsedDateTime, 'dd-MM-yyyy');
+
+console.log(newDateFormat);
