@@ -10,7 +10,7 @@ const futureDate = addDays(now, 7);
 console.log('Date after 7 days:', format(futureDate, 'yyyy-MM-dd'));
 
 const pastDate = subMonths(now, 3);
-console.log('Date 3 months ago:', format(pastDate, 'MMMM yyyy'));
+console.log('Date 3 months ago:', format(pastDate, 'dd MMMM yyyy'));
 
 // 3. Difference Between Dates
 const startDate = new Date('2024-01-01');
@@ -34,5 +34,7 @@ const parsedDateTime = parse(dateString, dateFormat, new Date());
 console.log(parsedDateTime);
 
 const newDateFormat = format(parsedDateTime, 'dd-MM-yyyy');
+const newDateFormat2 = format(parsedDateTime, 'eeee, MMMM dd, yyyy');
 
 console.log(newDateFormat);
+console.log(newDateFormat2);
