@@ -1,4 +1,4 @@
-import { format, addDays, subMonths, subYears, differenceInDays, startOfWeek, endOfMonth, eachDayOfInterval, parse } from 'date-fns';
+import { format, addDays, subMonths, subYears, differenceInDays, startOfWeek, endOfMonth, eachDayOfInterval, parse, addMonths } from 'date-fns';
 
 // 1. Current Date and Time
 const now = new Date();
@@ -18,7 +18,7 @@ console.log('Date 2 years ago:', format(pastDate2, 'dd MMMM yyyy'));
 
 // 3. Difference Between Dates
 const startDate = new Date('2024-01-01');
-const endDate = new Date('2024-09-11');
+const endDate = addMonths(startDate,7);
 console.log('Days between:', differenceInDays(endDate, startDate));
 
 // 4. Weekday Calculations
